@@ -1,12 +1,8 @@
-# Kafka Tools
-
-Various tools for working with Kafka.
-
-## Cluster Generator
+# Kafka Cluster Generator
 
 The cluster generator outputs a set of Docker Compose files for deploying a Kafka cluster.
 
-### Example
+## Example
 
 This command generates files for deploying 3 Kafka brokers, 1 Zookeeper instance, and 1 Kafka Manager interface.
 
@@ -20,7 +16,7 @@ cluster-generator.py \
 
 See the [example](./example) directory for the output.
 
-### Install
+## Install
 
 ```
 pip install -r requirements.txt
