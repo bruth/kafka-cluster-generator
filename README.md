@@ -2,6 +2,12 @@
 
 The cluster generator outputs a set of Docker Compose files for deploying a Kafka cluster.
 
+**Features**
+
+- Includes containers for Kafka, Zookeeper, and [Kafka Manager](https://github.com/yahoo/kafka-manager)
+- Generates a set of [Docker Compose] files for each host
+- Generates a script for deploying the containers for each file
+
 ## Example
 
 This command generates files for deploying 3 Kafka brokers, 1 Zookeeper instance, and 1 Kafka Manager interface.
