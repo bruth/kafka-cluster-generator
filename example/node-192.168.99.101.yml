@@ -1,0 +1,22 @@
+kafka:
+    environment:
+        JMX_PORT: 9000
+        KAFKA_ADVERTISED_HOST_NAME: 192.168.99.101
+        KAFKA_ADVERTISED_PORT: 9094
+        KAFKA_AUTO_LEADER_REBALANCE_ENABLE: 'true'
+        KAFKA_BROKER_ID: 2
+        KAFKA_CONTROLLED_SHUTDOWN_ENABLE: 'true'
+        KAFKA_DELETE_TOPIC_ENABLE: 'true'
+        KAFKA_DUAL_COMMIT_ENABLED: 'false'
+        KAFKA_LOG_DIRS: /kafka/logs.2
+        KAFKA_LOG_RETENTION_BYTES: -1
+        KAFKA_LOG_RETENTION_HOURS: -1
+        KAFKA_OFFSETS_STORAGE: kafka
+        KAFKA_ZOOKEEPER_CONNECT: 192.168.99.100:2181
+    image: wurstmeister/kafka:0.8.2.1
+    ports:
+    - 9093:9000
+    - 9094:9092
+    restart: always
+    volumes:
+    - /data/kafka/logs.2:/kafka/logs.2
