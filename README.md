@@ -16,6 +16,12 @@ cluster-generator.py \
 
 See the [example](./example) directory for the output.
 
+To deploy, run:
+
+```
+./example/deploy-cluster.sh
+```
+
 ## Install
 
 ```
