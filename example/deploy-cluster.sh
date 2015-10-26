@@ -7,7 +7,7 @@ cd "${BASH_SOURCE%/*}" || exit
 
 CLUSTER_PREFIX="kafka"
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -ne 0 ]; then
     ARGS="$@"
 else
     ARGS="up -d"
