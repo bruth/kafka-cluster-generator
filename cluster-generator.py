@@ -114,11 +114,17 @@ set -v
 cd "${BASH_SOURCE%/*}" || exit
 
 CLUSTER_PREFIX="kafka"
+
+if [ "$#" -ne 1 ]; then
+    ARGS="$@"
+else
+    ARGS="up -d"
+fi
 """
 
 script_template = """
 DOCKER_HOST=tcp://{docker_host}:{docker_port}
-docker-compose -f {file_name} -p "$CLUSTER_PREFIX" up -d
+docker-compose -f {file_name} -p "$CLUSTER_PREFIX" $ARGS
 """
 
 
